@@ -13,7 +13,7 @@ h1 {
     margin-bottom: 3%;
 }
 .accord-container {
-    margin: 30px auto;
+    margin: 3% auto;
     width: 70%;
     height: fit-content;
 }
@@ -32,9 +32,10 @@ input {
     padding: 5%;
     margin: 0 auto;
     background-color: #7ac24b;
-    border: 3px solid #fff;
+    border: 0.2em solid #fff;
+    border-radius: 1em;
 }
-.accord__label h2 {
+.h2 {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -44,15 +45,15 @@ input {
     font-size: 1.5em;
     text-align: center;
 }
-.accord__label h2 span{
+.h2 span{
     display: none;
 }
-.accord__div input:checked + label h2 span {
+.accord__div input:checked + label .h2 span {
     transition: transform .35s;
     transform: rotate(90deg);
     display: none;
 }
-.accord__div input:checked + label h2 {
+.accord__div input:checked + label .h2 {
     color:#fff;
 }
 .accord__div input:checked + label  .accord__img{
@@ -68,19 +69,19 @@ input {
  }
 
 @media screen and (min-width: 1280px) and (max-width: 1920px) {
-    .accord-container:hover .accord__label h2 span {
+    .accord-container:hover .accord__label .h2 span {
         display: inline-block;
         font-size: 0.9em;
         color:#fff;
         cursor: pointer;
     }
-    .accord-container:hover .accord__label h2 {
+    .accord-container:hover .accord__label .h2 {
         color:#fff;
     }
     .accord-container:hover .accord__label{
         cursor: pointer;
     }
-    .accord__div input:hover + label h2 span {
+    .accord__div input:hover + label .h2 span {
         transition: transform .35s;
         transform: rotate(90deg);
     }
@@ -96,17 +97,17 @@ input {
     h1 {
         font-size: 2em;
     }
-    .accord__label h2 span {
+    .h2 span {
         display: block;
         font-size: 0.8em;
         color:#fff;
         cursor: pointer;
         padding-left:3%;
     }
-    .accord__div input:checked + label h2 span {
+    .accord__div input:checked + label .h2 span {
         display: block;
     }
-    .accord__label h2 {
+    .h2 {
         color:#fff;
         font-size: 1em;
     }
@@ -118,15 +119,14 @@ input {
 @media screen and (max-width: 767px) {
     .accord-container {
         width: 90%;
-        margin-top: 10px;
     }
     h1 {
         font-size: 1.5em;
     }
-    .accord__label h2 span {
+    .h2 span {
         font-size: 0.7em;
     }
-    .accord__label h2 {
+    .h2 {
         font-size: 0.9em;
     }
 
