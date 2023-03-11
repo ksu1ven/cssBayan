@@ -1,0 +1,134 @@
+h1, div, body, h2 {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    margin: auto;
+    color: #7ac24b;
+    width: 70%;
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.accord-container {
+    margin: 3% auto;
+    width: 70%;
+    height: fit-content;
+}
+input {
+    display: none;
+}
+.accord__img {
+    width: 90%;
+    height: 0;
+    display: block;
+    margin: 2% auto 0;
+}
+.accord__label {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    margin: 0 auto;
+    background-color: #7ac24b;
+    border: 0.2em solid #fff;
+    border-radius: 1em;
+}
+.h2 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(7, 66, 18);
+    font-size: 1.5em;
+    text-align: center;
+}
+.h2 span{
+    display: none;
+}
+.accord__div input:checked + label .h2 span {
+    transition: transform .35s;
+    transform: rotate(90deg);
+    display: none;
+}
+.accord__div input:checked + label .h2 {
+    color:#fff;
+}
+.accord__div input:checked + label  .accord__img{
+    animation-name: appear;
+    animation-duration: 2s;
+    height: 100%;
+}
+@keyframes appear {
+    0% {opacity: 0;
+        height: 0; }
+    100% {opacity: 1;
+        height: 100%;}
+ }
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+    .accord-container:hover .accord__label .h2 span {
+        display: inline-block;
+        font-size: 0.9em;
+        color:#fff;
+        cursor: pointer;
+    }
+    .accord-container:hover .accord__label .h2 {
+        color:#fff;
+    }
+    .accord-container:hover .accord__label{
+        cursor: pointer;
+    }
+    .accord__div input:hover + label .h2 span {
+        transition: transform .35s;
+        transform: rotate(90deg);
+    }
+    .accord__div:hover .accord__img{
+        animation-name: appear;
+        animation-duration: 2s;
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1279px) {
+    h1 {
+        font-size: 2em;
+    }
+    .h2 span {
+        display: block;
+        font-size: 0.8em;
+        color:#fff;
+        cursor: pointer;
+        padding-left:3%;
+    }
+    .accord__div input:checked + label .h2 span {
+        display: block;
+    }
+    .h2 {
+        color:#fff;
+        font-size: 1em;
+    }
+    .accord__label{
+        cursor: pointer;
+    }
+
+}
+@media screen and (max-width: 767px) {
+    .accord-container {
+        width: 90%;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .h2 span {
+        font-size: 0.7em;
+    }
+    .h2 {
+        font-size: 0.9em;
+    }
+
+}
+
